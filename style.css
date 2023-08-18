@@ -1,0 +1,83 @@
+body{
+    background-color: #181D31;
+    font-family: sans-serif;
+    margin: 0; /* con solo escribir m0 */
+    overflow: hidden;
+}
+header{
+    display: flex; /* Al div que está dentro no se lo agrega, el que tiene el nombre y logo. Lo hago en el selector de abajo */ 
+    background-color: #678983;
+    /* text-decoration: none; USARLO DIRECTAMENTE EN LOS ELEMENTOS*/
+    justify-content: space-between; /*Separación de los elementos del contenedor. En este caso los 2 contenedores adentro*/
+    min-height: 70px; /*Para que la altura se adapte automáticamente*/
+    align-items: center; /*Que me queden centrados en cuanto a sus bordes, el relleno*/
+    padding: 10px; /* Para separarlos de sus bordes */
+}
+
+.logo{
+    display: flex;
+    align-items: center; /*Lo repetimos acá porque este es OTRO contenedor*/
+}
+
+.logo img{ /* A la imagen que está dentro del contenedor con esa clase */
+    height: 70px;
+    width: 90px;
+    margin-right: 10px; /*Para separarlo un poco del nombre*/
+} 
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a{
+    font-weight: 600; /*Le ponemos negrita*/
+    padding-right: 10px;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+}
+
+nav a:hover{
+    color: white;
+}
+
+@media (max-width:750px){ /*El comportamiento cuando sea menor a esos píxeles*/
+
+    header{
+        flex-direction: column; /*Hago que me aparezcan los contenedores uno abajo de otro*/
+        /* height: 100px; */ /*Agrego fondo para que un contenedor no me quede afuera*/
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+@media (max-width:320px){
+
+    .nav-link{
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .logo{
+        display: block;
+    }
+
+    .nombre_empresa{
+        margin-left: 13%;
+    }
+}
+
+@media (max-width:200px){
+    
+    .nombre_empresa{
+        font-size: 25px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
